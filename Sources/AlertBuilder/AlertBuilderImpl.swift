@@ -5,16 +5,13 @@ import UIKit
 final class AlertBuilderImpl: AlertBuilder {
     init(
         environment: Environment,
-        tintColor: UIColor?,
         provider: AlertBuilderProvider
     ) {
         self.environment = environment
-        self.tintColor = tintColor
         self.provider = provider
     }
 
     private let environment: Environment
-    private let tintColor: UIColor?
     private unowned let provider: AlertBuilderProvider
 
     // MARK: -
@@ -102,7 +99,7 @@ final class AlertBuilderImpl: AlertBuilder {
             preferredStyle: alertPreferredStyle(from: alertToBuild)
         )
 
-        if let tintColor = tintColor {
+        if let tintColor = provider.tintColor {
             alertController.view.tintColor = tintColor
         }
 
