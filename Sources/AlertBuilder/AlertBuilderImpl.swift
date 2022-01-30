@@ -98,10 +98,7 @@ final class AlertBuilderImpl: AlertBuilder {
             message: alertToBuild.message,
             preferredStyle: alertPreferredStyle(from: alertToBuild)
         )
-
-        if let tintColor = provider.tintColor {
-            alertController.view.tintColor = tintColor
-        }
+        alertController.view.tintColor = provider.tintColor
 
         for action in alertToBuild.actions {
             let alertAction = UIAlertAction(

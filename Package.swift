@@ -22,13 +22,15 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(name: "Core", url: "https://github.com/kutchie-pelaez-packages/Core.git", .branch("master"))
+        .package(name: "Core", url: "https://github.com/kutchie-pelaez-packages/Core.git", .branch("master")),
+        .package(name: "CoreUI", url: "https://github.com/kutchie-pelaez-packages/CoreUI.git", .branch("master"))
     ],
     targets: [
         .target(
             name: "AlertBuilder",
             dependencies: [
                 .product(name: "Core", package: "Core"),
+                .product(name: "CoreUI", package: "CoreUI"),
                 .target(name: "Alert")
             ]
         ),
