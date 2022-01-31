@@ -12,7 +12,7 @@ final class AlertBuilderImpl: AlertBuilder {
     }
 
     private let environment: Environment
-    private unowned let provider: AlertBuilderProvider
+    private let provider: AlertBuilderProvider
 
     // MARK: -
 

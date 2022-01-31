@@ -1,7 +1,7 @@
 import CoreUI
 import UIKit
 
-public protocol AlertBuilderProvider: AnyObject {
+public protocol AlertBuilderProvider {
     var tintColor: UIColor { get }
     func lozalizedTitle(for key: AlertLocalizationKey) -> String
 }
