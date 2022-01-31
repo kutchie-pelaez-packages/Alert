@@ -20,6 +20,15 @@ extension AlertAction {
         )
     }
 
+    public static var edit: AlertAction { edit(nil) }
+    public static func edit(_ block: Block?) -> AlertAction {
+        AlertAction(
+            title: .edit,
+            style: .default,
+            block: block
+        )
+    }
+
     public static var close: AlertAction { close(nil) }
     public static func close(_ block: Block?) -> AlertAction {
         AlertAction(

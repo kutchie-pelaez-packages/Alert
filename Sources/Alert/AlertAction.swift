@@ -6,6 +6,7 @@ public struct AlertAction {
         case close
         case done
         case delete
+        case edit
         case custom(String)
     }
 

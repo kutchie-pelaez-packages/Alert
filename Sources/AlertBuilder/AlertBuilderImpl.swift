@@ -55,6 +55,9 @@ final class AlertBuilderImpl: AlertBuilder {
         case .delete:
             return provider.lozalizedTitle(for: .delete)
 
+        case .edit:
+            return provider.lozalizedTitle(for: .edit)
+
         case let .custom(string):
             return string
         }

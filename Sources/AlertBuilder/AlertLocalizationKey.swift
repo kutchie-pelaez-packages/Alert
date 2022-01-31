@@ -3,4 +3,5 @@ public enum AlertLocalizationKey {
     case close
     case delete
     case done
+    case edit
 }
