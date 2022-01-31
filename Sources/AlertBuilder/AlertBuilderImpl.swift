@@ -19,7 +19,8 @@ final class AlertBuilderImpl: AlertBuilder {
     private func alertTitle(from alert: Alert) -> String? {
         if
             alert.title == nil &&
-            alert.message == nil
+            alert.message == nil &&
+            alert.style == .alert
         {
             return safeUndefined(
                 " ",
