@@ -8,6 +8,6 @@ public protocol AlertBuilderProvider {
 
 extension AlertBuilderProvider {
     public var tintColor: UIColor {
-        SystemColors.Tint.primary
+        System.Colors.Tint.primary
     }
 }
