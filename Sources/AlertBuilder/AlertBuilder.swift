@@ -6,20 +6,11 @@ public protocol AlertBuilder {
 }
 
 extension AlertBuilder {
-    public func build(
-        _ alert: Alert,
-        or debugError: Error?
-    ) -> UIViewController {
-        build(
-            alert,
-            or: debugError?.localizedDescription
-        )
+    public func build(_ alert: Alert, or debugError: Error?) -> UIViewController {
+        build(alert, or: debugError?.localizedDescription)
     }
 
     public func build(_ alert: Alert) -> UIViewController {
-        build(
-            alert,
-            or: nil
-        )
+        build(alert, or: nil)
     }
 }

@@ -7,7 +7,5 @@ public protocol AlertBuilderProvider {
 }
 
 extension AlertBuilderProvider {
-    public var tintColor: UIColor {
-        System.Colors.Tint.primary
-    }
+    public var tintColor: UIColor { System.Colors.Tint.primary }
 }

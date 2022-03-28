@@ -33,46 +33,30 @@ final class AlertBuilderImpl: AlertBuilder {
 
     private func alertPreferredStyle(from alert: Alert) -> UIAlertController.Style {
         switch alert.style {
-        case .alert:
-            return .alert
-
-        case .actionSheet:
-            return .actionSheet
+        case .alert: return .alert
+        case .actionSheet: return .actionSheet
         }
     }
 
     private func alertActionTitle(from title: AlertAction.Title) -> String {
+        let key: AlertLocalizationKey
         switch title {
-        case .cancel:
-            return provider.lozalizedTitle(for: .cancel)
-
-        case .close:
-            return provider.lozalizedTitle(for: .close)
-
-        case .done:
-            return provider.lozalizedTitle(for: .done)
-
-        case .delete:
-            return provider.lozalizedTitle(for: .delete)
-
-        case .edit:
-            return provider.lozalizedTitle(for: .edit)
-
-        case let .custom(string):
-            return string
+        case .cancel: key = .cancel
+        case .close: key = .close
+        case .done: key = .done
+        case .delete: key = .delete
+        case .edit: key = .edit
+        case let .custom(string): return string
         }
+
+        return provider.lozalizedTitle(for: key)
     }
 
     private func alertActionStyle(from style: AlertAction.Style) -> UIAlertAction.Style {
         switch style {
-        case .default:
-            return .default
-
-        case .cancel:
-            return .cancel
-
-        case .destructive:
-            return .destructive
+        case .default: return .default
+        case .cancel: return .cancel
+        case .destructive: return .destructive
         }
     }
 
